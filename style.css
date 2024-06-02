@@ -1,0 +1,353 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #F6F5F3;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 285px auto;
+    grid-template-rows: 1fr 6fr;
+    height: 100vh;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+    padding: 20px;
+    background-color: #9A9E66;
+    color: #FFFFFF;
+    height: 100%;
+}
+
+.dashboard,
+.content {
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: center;
+}
+
+.dashboard {
+    column-gap: 10px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.title {
+    font-size: 20pt;
+    font-weight: 700;
+}
+
+.side-contents {
+    margin-top: 50px;
+    font-size: 16pt;
+    font-weight: 700;
+    display: grid;
+    row-gap: 20px;
+}
+
+.sidebar-icon {
+    height: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    column-gap: 10px;
+}
+
+.header {
+    grid-column: 2 / 3;
+    display: grid;
+    align-content: space-between;
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 5px gainsboro;
+    padding: 20px 50px 20px 40px;
+}
+
+.top-header,
+.bottom-header {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-content: center;
+}
+
+.top-left-header,
+.bottom-left-header {
+    grid-column: 1 / 2;
+}
+
+.top-right-header,
+.bottom-right-header {
+    grid-column: 2 / 3;
+}
+
+.top-header {
+    height: fit-content;
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 30px;
+}
+
+.top-left-header {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-column-gap: 15px;
+    align-items: center;
+}
+
+.search-img,
+.notifications-img {
+    height: 25px;
+}
+
+.search-bar {
+    background-color: #e3e3e3;
+    width: 100%;
+    max-width: 600px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.top-right-header {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    justify-content: end;
+    align-items: center;
+    grid-column-gap: 30px;
+    margin-left: 30px;
+}
+
+.profile-img-small,
+.profile-img-big,
+.trending-plant>img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-img-small,
+.trending-plant>img {
+    width: 45px;
+    height: 45px;
+}
+
+.profile-name {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #2B4735;
+}
+
+.bottom-left-header {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-column-gap: 20px;
+    align-items: center;
+}
+
+.profile-img-big {
+    height: 65px;
+    width: 65px;
+}
+
+.greetings {
+    font-weight: 700;
+}
+
+.hi-there {
+    font-size: 9pt;
+}
+
+.name-username {
+    font-size: 18pt;
+}
+
+.bottom-right-header {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    align-content: center;
+    justify-content: end;
+    grid-column-gap: 25px;
+}
+
+.bottom-right-header>div {
+    background-color: #9A9E66;
+    color: #FFFFFF;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100px;
+    min-width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 20px;
+    margin: 30px 30px 30px 25px;
+}
+
+.plants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-row-gap: 30px;
+    grid-column-gap: 25px;
+}
+
+.right-contents-container {
+    grid-row-gap: 25px;
+}
+
+.card,
+.announcements,
+.trending {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 5px 5px gainsboro;
+}
+
+.subtitle,
+.plant-name {
+    font-weight: 700;
+    color: #2B4735;
+}
+
+.subtitle {
+    font-size: 16pt;
+    margin-bottom: 10px;
+}
+
+.card {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 10px auto;
+}
+
+.plant-name {
+    font-size: large;
+}
+
+.card-side-line {
+    grid-row: 1 / 5;
+    background-color: #EE9146;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.card-content {
+    margin: 30px 10px 20px 20px;
+    display: grid;
+    grid-template-rows: max-content 95px max-content;
+}
+
+.card-content:nth-child(2) {
+    font-size: 11pt;
+    font-weight: 500;
+    color: #BF8F67;
+    line-height: 1.2;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.card-icon {
+    height: 25px;
+}
+
+.announcements,
+.trending {
+    padding: 30px;
+}
+
+.announcement-title {
+    font-size: 10pt;
+    font-weight: 800;
+    color: #2B4735;
+}
+
+.announcement-title + p,
+.description {
+    color: #BF8F67;
+    font-weight: 500;
+}
+
+.announcement-title + p {
+    font-size: 8pt;
+    line-height: 1.2;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #CCC;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.trending-container {
+    margin-top: 30px;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.trending-plant {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-column-gap: 15px;
+    place-items: center;
+}
+
+.plant {
+    color: #2B4735;
+    font-weight: 500;
+    font-size: 10pt;
+}
+.trending-plant>img {
+    object-position: 100% 0;
+}
+
+.description {
+    font-size: 9.5pt;
+}
